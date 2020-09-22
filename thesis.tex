@@ -15,12 +15,29 @@
 
 \newcommand{\reviewerone}{Prof. Dr.-Ing. Christoph Stiller}
 \newcommand{\advisorone}{Frank Bieder, M.Sc.}
-\newcommand{\reviewertwo}{Prof. Dr.-Ing. Fernando Puente}
+\newcommand{\reviewertwo}{Prof. Dr.-Ing. Michael Heizmann}
 \newcommand{\advisortwo}{Hannes Weinreuter, M.Sc.}
 
-\newcommand{\timeandplace}{Karlsruhe, May 2020}
+\newcommand{\timeandplace}{Karlsruhe, September 2020}
 
 \newcommand{\frontmatterhint}{Draft! / Vorl\"aufige Fassung!}
+
+\definecolor{c1}{HTML}{9ACFC6}
+\definecolor{c2}{HTML}{DABBD6}
+\definecolor{c3}{HTML}{CBDCB9}
+\definecolor{c4}{HTML}{9AC3E1}
+\definecolor{c5}{HTML}{DEBBA5}
+\definecolor{c6}{HTML}{C4DDE5}
+\newcommand*{\xMin}{0}%
+\newcommand*{\xMax}{6}%
+\newcommand*{\yMin}{0}%
+\newcommand*{\yMax}{4}%
+
+\newcommand*{\xMinR}{9.5}%
+\newcommand*{\xMaxR}{12.5}%
+\newcommand*{\yMinR}{1}%
+\newcommand*{\yMaxR}{3}%
+
 
 %% -------------------------------
 %% |  Information for PDF file   |
@@ -54,6 +71,26 @@
 % units
 	\usepackage{siunitx}
 	\usepackage{dcolumn}
+	
+% Additional
+	\usepackage[numbers]{natbib}
+	\usepackage{subfigure}
+	\usepackage{pgfplots}
+    \usepackage{amsmath}
+    \usepackage{neuralnetwork}
+    \usepackage{ifthen}
+    \usepackage{tikz}
+    \usepackage{amssymb}
+    \usepackage{bm}
+    \usetikzlibrary{arrows.meta}
+    \usetikzlibrary{decorations.pathreplacing}
+    \usetikzlibrary{matrix, positioning}
+    \usepackage{pdfpages}
+    %\usepackage{natbib}
+    \usepackage{natbib}
+    \usepackage{rotating}
+    \usepackage{array}
+    \usepackage{booktabs}
 
 
 %% --------------------------------
@@ -84,7 +121,23 @@
   	
 	% ordinary acronyms
 	\newacronym{ma}{MA}{My Acronym}
-	\newacronym{}{}{}
+	\newacronym{iou}{IOU}{Intersection over Union}
+	\newacronym{sq}{SQ}{Segmentation Quality}	
+	\newacronym{rq}{RQ}{Recognition Quality}
+	\newacronym{pq}{PQ}{Panoptic Quality}
+	\newacronym{fcn}{FCN}{Fully Convolutional Network}
+	\newacronym{cnns}{CNNs}{Convolutional Neural Networks}
+	\newacronym{mlp}{MLP}{Multi-Layer Perceptron}
+	\newacronym{anns}{ANNs}{Artificial Neural Networks}
+	\newacronym{sgd}{SGD}{Stochastic Gradient Descent}
+	\newacronym{tp}{TP}{True Positive}
+	\newacronym{fp}{FP}{False Positive}
+	\newacronym{fn}{FN}{False Negative}
+	\newacronym{nms}{NMS}{Non-Maxima Suppression}
+	\newacronym{gpu}{GPU}{Graphics Processing Unit}
+	\newacronym{pc}{PC}{Parsing Covering}
+	\newacronym{gd}{GD}{Gradient Descent}
+	\newacronym{aspp}{ASPP}{Atrous Spatial Pyramid Pooling Module}
 	% usage: \gls{} \glspl{} or \acrshort{}
 	
 	% online references
@@ -115,6 +168,12 @@
 
 \newcommand{\majortodo}[1]
 {{\textbf{\textcolor{red}{(\margmajortodo{}#1)}}}{}}
+
+
+\newcolumntype{P}[2]{%
+  >{\begin{turn}{#1}\begin{minipage}{#2}\small\raggedright\hspace{0pt}}l%
+  <{\end{minipage}\end{turn}}%
+}
 
 %% --------------------------------
 %% | Draft Marker - only for draft! |
@@ -190,18 +249,19 @@ Wort-tren-nung
 \mainmatter
 \pagenumbering{arabic}
 \include{Main/1_Introduction}      
-\include{Main/2_Fundamentals_Related_Work}     
-\include{Main/3_Conditions_Preliminaries} 		
-\include{Main/4_Concepts}
-\include{Main/5_Implementation}
-\include{Main/6_Evaluation}
-\include{Main/7_Conclusion_Future_Work}      
+\include{Main/2_Fundamentals}     
+\include{Main/3_Related_Work} 		
+\include{Main/4_Data_Representation}
+\include{Main/5_Experimental_Setup}
+\include{Main/6_Methodology}
+\include{Main/7_Evaluation}
+\include{Main/8_Conclusion_Future_Work}      
 
 %% --------------------
 %% |   Appendix+Verzeichnisse   |
 %% --------------------
-\appendix
-\include{Appendix/Appendix}
+%\appendix
+%\include{Appendix/Appendix}
 
 % List of Figures
 \cleardoublepage

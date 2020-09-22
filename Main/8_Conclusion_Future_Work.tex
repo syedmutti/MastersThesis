@@ -1,0 +1,16 @@
+% !TeX root = ../thesis.tex
+
+\chapter{Conclusion and  Outlook}
+\label{sec:conclusion_future-work}
+
+
+\section{Conclusion}
+
+The goal of this thesis was to approach panoptic segmentation as multi-task learning problem whereby learning semantic and instance segmentation jointly and presenting a coherent single view representation unifying semantic segmentation for \textit{stuff} classes and instance segmentation for \textit{things} classes. Presented works explored bottom-up paradigm for panoptic segmentation by conceiving and learning on pixel-level relationships to generate instance representations and subsequently instance segmentation. Since it is desired to replace two-stage object detector based approaches for instance segmentation, presented work studies various instance encoding possibilities in greater detail. A general approach adopted for this purpose is representing instances by their center points as reference along with additional modality that encodes pixel-level distances i.e. offset to center points. To this end, various center points and offset representations have been curated and studied. Research on these representations suggest a favourable size for encoding center point can lead to a better performance. It has also been shown that directly learning the offset representations can be tedious however learning a simple representation while leveraging a brief post-processing step can greatly improve instance boundary delineations and thus better instance segmentation results. Therefore, presented work shows a reasonable performance on panoptic segmentation task whilst avoiding top-down and two-stage instance segmentation approaches. It further highlights the importance for selecting a suitable distribution size for encoding key-points. It also provides a detailed comparison between different encoding styles that can be employed for learning offset vectors. 
+
+
+\section{Future Work}
+
+It has been observed that center of mass used for selecting the center points for instance representations is robust and generally tackles occlusions to a great extent. However, traffic participants such as bicycles and motorbikes are at times get predicted twice due to larger circular wheels. This is a problem that has been observed in some cases. It is therefore desired to explore the paradigm of center of gravity to represent such center points in future work. 
+
+Since, end to end encoding has still shown relatively better performance quantitatively which to some extent corresponds to a difficult to learn yet more comprehensive representation. Therefore, it makes for an interesting investigation topic to scale such end-to-end offset encodings using an sigmoid function and learn on these scaled offset representations.

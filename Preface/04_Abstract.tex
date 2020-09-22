@@ -3,11 +3,16 @@
 \chapter*{Abstract}
 \addcontentsline{toc}{chapter}{Abstract}
 
-\blindtext
+Real-world vision systems demand meticulous environment perception and scene understanding. This becomes even more critical for applications such as autonomous driving that deal with complex situations containing multiple traffic participants such as in urban scenarios. 
+Semantic segmentation - assigning a class label to every pixel - provides for a holistic scene representation of the scene under observation. Although, this representation plays a key role in meaningful and holistic scene interpretation, this virtual representation does not distinguish between individual instances of same class. Instance segmentation - delineating each distinct instance of predefined set of classes appearing in an image - generates a representation of the scene by grouping together pixels of same class. Though valuable representation, it lacks necessary semantic layout information and hinders a thorough scene interpretation.
+Many robotics and mobile system applications could benefit from best of both worlds by generating a coherent scene segmentation that is rich, complete and comprehensive i.e. a combination of semantic segmentation and instance segmentation. Traditionally, both of the aforementioned segmentation tasks are fundamentally different in the way they are approached. However, panoptic segmentation - combination of instance and semantic segmentation - aims to solve both tasks in a unified manner. A unified task therefore naturally demands an approach that tackles the problem in a unified fashion by posing it as multi-task learning problem. This thesis aspires to explore panoptic segmentation as a multi-task learning problem, 
+more specifically it investigates various possibilities  to encode pixel-level relationships for instance representation and their effects on overall panoptic task when learned in combination with semantic segmentation in multi-task setting. 
 
 
 
-\chapter*{Kurzfassung}
-\addcontentsline{toc}{chapter}{Kurzfassung}
+\textbf{Keywords:} panoptic segmentation, instance segmentation, semantic segmentation, instance encodings, keypoint detection, multi-task learning.
 
-\blindtext
+%\chapter*{Kurzfassung}
+%\addcontentsline{toc}{chapter}{Kurzfassung}
+
+%\blindtext
